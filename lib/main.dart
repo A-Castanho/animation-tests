@@ -8,6 +8,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'animations/box_hide.dart';
 import 'animations/bumpy_square.dart';
+import 'screens/box_hide_screen.dart';
 
 //CHECK FOLLOWING:
 //
@@ -60,14 +61,14 @@ class DynamicCircle extends HookConsumerWidget {
     controller.forward();
 
     return Scaffold(
-      body: Center(
+        body: /* Center(
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 3,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              /*  Slider(
+            children: [ */
+            /*  Slider(
                   value: sliderValue,
                   max: 1.0,
                   min: 0.0,
@@ -80,11 +81,11 @@ class DynamicCircle extends HookConsumerWidget {
                 duration: sliderValue,
               ),
               RotatingContainer(), */
-              BoxHide()
-            ],
+            Center(child: BoxHideScreen())
+        /*  ],
           ),
         ),
-      ),
-    );
+      ), */
+        );
   }
 }
